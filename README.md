@@ -1,12 +1,11 @@
-# NexaFlow AI - Tech Startup Portfolio Website
+# Tech Startup Portfolio Website
 
 **MERN Stack Project**  
-**Team Member: M. Junaid Akbar**  
-**Role: Research + UX + Design + Prototype of Contact page**
+**Developer: M. Junaid Akbar**
 
 ---
 
-## 🏗️ MERN Stack Architecture
+## 🏗️ Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -25,91 +24,69 @@
 └─────────────────────────────────────────────────────────┘
 ```
 
-## 📋 M. Junaid Akbar's Deliverables
+---
 
-### ✅ 1. Sitemap (Information Architecture)
-- Full site structure: Home → About → Services → Case Studies → Blog → Contact
+## 📁 Project Structure
 
-### ✅ 2. Contact Form Flow
-- Complete form with validation
-- Fields: Name, Email, Company, Service, Message
-
-### ✅ 3. Contact Page (Wireframe + High-Fidelity UI)
-- Modern dark theme with gradient accents
-- Fully responsive design
-
-### ✅ 4. Contact Page Animations
-- Scroll-triggered animations
-- Form feedback with loading states
-- Button hover effects
-
-### ✅ 5. Navbar + Sticky Animation
-- Sticky navigation with backdrop blur
-- Mobile responsive hamburger menu
-
-### ✅ 6. Footer Design
-- Full sitemap links
-- Social media integration
-
-### ✅ 7. Loading Animation
-- Logo animation with progress bar
+```
+tech-startup-portfolio/
+├── .gitignore
+├── package.json               # Root - runs both client & server
+├── README.md
+├── WIRE FRAME.svg            # Visual sitemap
+│
+├── client/                    # React Frontend (Vite)
+│   ├── index.html
+│   ├── package.json
+│   ├── vite.config.js
+│   └── src/
+│       ├── App.jsx
+│       ├── main.jsx
+│       ├── index.css
+│       ├── components/
+│       │   ├── Navbar.jsx
+│       │   ├── Navbar.css
+│       │   ├── Footer.jsx
+│       │   ├── Footer.css
+│       │   ├── Loading.jsx
+│       │   └── Loading.css
+│       └── pages/
+│           ├── Contact.jsx
+│           └── Contact.css
+│
+└── server/                    # Express Backend
+    ├── package.json
+    ├── index.js
+    └── routes/
+        └── contact.js
+```
 
 ---
 
 ## 🚀 Quick Start
 
-### Option 1: Run Both (Frontend + Backend)
+### Run Both (Frontend + Backend)
 ```bash
-# From project root
 npm run dev
 ```
-This runs both React (port 3000) and Express API (port 5000)
+- React: http://localhost:3000
+- Express API: http://localhost:5000
 
-### Option 2: Run Frontend Only
+### Run Frontend Only
 ```bash
 cd client
 npm run dev
 ```
-Opens at http://localhost:3000
 
-### Option 3: Run Backend Only
+### Run Backend Only
 ```bash
 cd server
 npm run dev
 ```
-API runs at http://localhost:5000
 
 ---
 
-## 📁 Project Structure (MERN)
-
-```
-tech-startup-portfolio/
-├── client/                    # REACT Frontend
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── Navbar.jsx    # Navigation + Sitemap
-│   │   │   ├── Footer.jsx    # Footer
-│   │   │   └── Loading.jsx   # Loading Animation
-│   │   ├── pages/
-│   │   │   └── Contact.jsx   # Contact Page
-│   │   ├── App.jsx
-│   │   └── index.css
-│   ├── package.json
-│   └── vite.config.js
-│
-├── server/                    # EXPRESS Backend
-│   ├── routes/
-│   │   └── contact.js        # Contact API Endpoint
-│   ├── index.js              # Server entry
-│   └── package.json
-│
-└── package.json               # Root (runs both)
-```
-
----
-
-## 🔌 API Endpoints (Express)
+## 🔌 API Endpoints
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -119,26 +96,37 @@ tech-startup-portfolio/
 
 ---
 
-## 🎨 Tech Stack
+## 🛠️ Tech Stack
 
-- **M**ongoDB - Database
-- **E**xpress.js - Backend framework
-- **R**eact 18 - Frontend library
-- **N**ode.js - JavaScript runtime
-
-### Additional:
+### Frontend
+- **React 18** - UI library
 - **Vite** - Build tool
 - **Framer Motion** - Animations
 - **React Router** - Routing
 
+### Backend
+- **Express.js** - Web framework
+- **Node.js** - Runtime
+- **MongoDB** - Database (via Mongoose)
+- **CORS** - Cross-origin resource sharing
+- **Dotenv** - Environment variables
+
 ---
 
-## 📱 Features
+## ✨ Features
 
-### Responsive Design
-- Mobile: < 640px
-- Tablet: 640px - 1023px  
-- Desktop: ≥ 1024px
+### UI Components
+- Responsive Navbar with sticky animation
+- Mobile hamburger menu
+- Loading screen with progress animation
+- Footer with sitemap links
+- Contact page with form validation
+
+### Animations
+- Scroll-triggered animations
+- Button hover effects
+- Form feedback with loading states
+- Navbar backdrop blur
 
 ### Accessibility
 - ARIA labels
@@ -146,41 +134,49 @@ tech-startup-portfolio/
 - Focus states
 - Reduced motion support
 
-### Animations
-- Navbar sticky with blur
-- Loading animation
-- Scroll triggers
-- Hover effects
-
 ---
 
-## ⚠️ Important: How to Run
+## 📱 Responsive Breakpoints
 
-**DO NOT** open `index.html` directly in browser!
-
-You MUST run the development server:
-
-```bash
-# Terminal command to run:
-npm run dev
-```
-
-Then open: **http://localhost:3000**
+- Mobile: < 640px
+- Tablet: 640px - 1023px  
+- Desktop: ≥ 1024px
 
 ---
 
 ## 📦 Dependencies
 
-### Frontend (client/)
-- react, react-dom
-- framer-motion (animations)
-- react-router-dom
+### Frontend (`client/`)
+```json
+{
+  "framer-motion": "^10.16.16",
+  "react": "^18.2.0",
+  "react-dom": "^18.2.0",
+  "react-router-dom": "^6.21.1"
+}
+```
 
-### Backend (server/)
-- express
-- mongoose (MongoDB)
-- cors
-- dotenv
+### Backend (`server/`)
+```json
+{
+  "cors": "^2.8.5",
+  "dotenv": "^16.3.1",
+  "express": "^4.18.2",
+  "mongoose": "^8.0.3"
+}
+```
+
+---
+
+## ⚠️ Important
+
+**DO NOT** open `index.html` directly in browser!
+
+You MUST run the development server:
+```bash
+npm run dev
+```
+Then open: **http://localhost:3000**
 
 ---
 

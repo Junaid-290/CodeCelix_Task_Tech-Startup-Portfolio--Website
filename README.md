@@ -1,4 +1,4 @@
-# Tech Startup Portfolio Website
+# Tech Startup Contact
 
 **MERN Stack Project**  
 **Developer: M. Junaid Akbar**
